@@ -49,15 +49,17 @@ Calendar and commute coordination.
 ### 3. Document Concierge
 Document extraction and deadline reminders.
 
-Technology Stack
+## Technology Stack
 
+### Proposed Technologies
 - Python
-- Model Context Protocol
+- Model Context Protocol (MCP)
 - LangGraph
 - Pydantic
 - SQLite
 - Next.js
 
+These technologies are proposed for the planned implementation.
 Project Roadmap
 
 - [x] Project concept and architecture

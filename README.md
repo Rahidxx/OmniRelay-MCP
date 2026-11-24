@@ -44,25 +44,21 @@ The goal is to transform disconnected application operations into controlled, re
 
 OmniRelay MCP follows a four-layer orchestration architecture designed to support structured planning, permission validation, and controlled execution.
 
-System Architecture Diagram
 
+### Architecture Flow
+
+```mermaid
 flowchart TD
-    A[User Interface]
-    B[Intent Planner]
-    C[Policy Engine]
-    D{Approval}
-    E[Workflow Executor]
-    F[MCP Servers]
-    G[Execution Result]
-
-    A --> B
-    B --> C
-    C --> D
-    D -->|Approved| E
+    A[User Interface] --> B[Intent Planner]
+    B --> C[Policy Engine]
+    C --> D{Approval Required?}
+    D -->|Approved| E[Workflow Executor]
     D -->|Rejected| A
-    E --> F
-    F --> G
+    E --> F[MCP Server Layer]
+    F --> G[Execution Result]
     G --> A
+```
+
 
 Architecture Components
 

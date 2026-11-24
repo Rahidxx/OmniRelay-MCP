@@ -270,10 +270,23 @@ Theme: Deterministic, Permission-Scoped Cross-App Workflows
 
 ## 📂 Project Resources
 
-- 📊 [View Project Presentation](assets/OmniRelay_MCP_wHACKiest2026_Deck%20(2).pptx)
-- 🎬 [Watch Project Demo](assets/OmniRelay_MCP_Demo.mp4)
-- 🏗️ [System Architecture](assets/architecture.png)
+### 🎬 Project Demo Video
 
+[![Watch OmniRelay MCP Demo](assets/demo-thumbnail.png)](https://github.com/Rahidxx/OmniRelay-MCP/raw/refs/heads/main/assets/OmniRelay_MCP_Demo.mp4)
+
+▶️ Click the thumbnail to watch the full demonstration.
+
+### 📊 Project Presentation
+
+[📥 View / Download OmniRelay MCP Presentation](assets/OmniRelay_MCP_wHACKiest2026_Deck%20(2).pptx)
+
+### 🏗️ System Architecture
+
+![OmniRelay MCP Architecture](assets/architecture.png)
+
+---
+
+**OmniRelay MCP** | Built for wHACKiest 2026 🚀
 ---
 
 <p align="center">

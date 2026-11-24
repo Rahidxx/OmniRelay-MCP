@@ -140,8 +140,14 @@ AI Planning| Claude / Gemini
 
 These are proposed technologies for the planned implementation. Not all technologies or integrations are currently implemented.
 
-◈ 07. REPOSITORY STRUCTURE
 
+## ◈ 07. REPOSITORY STRUCTURE
+
+OmniRelay MCP follows a modular repository architecture.
+
+### Project Directory Tree
+
+```text
 OmniRelay-MCP/
 │
 ├── README.md
@@ -155,34 +161,38 @@ OmniRelay-MCP/
 ├── src/
 │   ├── planner/
 │   │   └── README.md
-│   │
 │   ├── guardrails/
 │   │   └── README.md
-│   │
 │   └── mcp_servers/
 │       └── README.md
 │
 └── assets/
     ├── presentation/
-    │   └── project-presentation.pptx
-    │
     └── demo/
-        └── project-demo.mp4
+```
 
-Directory Overview
+### Directory Description
 
-File / Directory| Description
-"README.md"| Main project documentation
-"policy_gate.py"| Initial policy-gate prototype
-"requirements.txt"| Python dependency list
-"docs/"| Architecture and use-case documentation
-"src/planner/"| Workflow planning components
-"src/guardrails/"| Permission and policy validation
-"src/mcp_servers/"| MCP server integration modules
-"assets/presentation/"| Hackathon presentation
-"assets/demo/"| Project demonstration video
+| Directory / File | Purpose |
+|---|---|
+| `docs/` | Technical documentation |
+| `src/planner/` | Workflow planning |
+| `src/guardrails/` | Permission validation |
+| `src/mcp_servers/` | MCP integrations |
+| `assets/presentation/` | Project PPT |
+| `assets/demo/` | Demo video |
+| `policy_gate.py` | Initial policy-gate prototype |
+| `requirements.txt` | Python dependencies |
 
-Note: The source directories currently serve as planned module locations. Full implementations are still under development.
+### Design Principles
+
+- Modular architecture
+- Separation of concerns
+- Extensible integrations
+- Structured workflows
+- Permission-controlled execution
+
+
 
 ◈ 08. SECURITY & RELIABILITY PRINCIPLES
 

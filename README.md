@@ -38,12 +38,16 @@ Four-layer execution pipeline
 3. Guardrail Engine – Validates permissions and action limits.
 4. MCP Servers – Connects external applications.
 
-Core Use Cases
+## Core Use Cases
 
-Workflow| Function
-Smart Bill Autopilot| Receipt processing and expense splitting
-Appointment Sync| Calendar and commute coordination
-Document Concierge| Document extraction and deadline reminders
+### 1. Smart Bill Autopilot
+Receipt processing and expense splitting.
+
+### 2. Appointment Sync
+Calendar and commute coordination.
+
+### 3. Document Concierge
+Document extraction and deadline reminders.
 
 Technology Stack
 

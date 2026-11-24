@@ -1,91 +1,178 @@
-OmniRelay MCP
+⚡ OmniRelay MCP
 
 Less Magic. More Utility.
 
 Deterministic, Permission-Scoped Cross-App Workflows for Everyday Life.
 
-OmniRelay MCP is a proposed local-first Model Context Protocol orchestration hub that connects everyday applications through structured, verifiable and permission-controlled workflows.
+<p align="center">
+  <img src="https://img.shields.io/badge/Project-OmniRelay_MCP-6366f1?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Protocol-MCP-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Early_Prototype-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Track-MAKE_MCP_MATTER-purple?style=for-the-badge" />
+</p>---
 
----
+◈ 01. Project Overview
 
-Overview
+OmniRelay MCP is a proposed local-first orchestration hub designed to connect everyday applications through structured, verifiable, and permission-controlled workflows.
 
-Everyday tasks are spread across multiple applications. OmniRelay MCP aims to simplify these tasks using structured AI workflows with deterministic execution and human approval.
+Instead of relying on disconnected AI actions, OmniRelay introduces a deterministic execution architecture where every workflow follows defined steps, validates permissions, and requests human approval before sensitive operations.
 
-The Problem
+Core Philosophy: AI-assisted planning. Deterministic execution. Human-controlled actions.
 
-- Fragmented information across applications.
-- Repetitive manual copy-paste.
-- Unreliable AI tool execution.
-- Lack of transparent permissions and safeguards.
+◈ 02. The Problem
 
-Our Solution
+Modern digital workflows are fragmented across multiple applications.
 
-OmniRelay MCP introduces:
+- Application silos create disconnected workflows.
+- Repetitive manual operations waste time.
+- Uncontrolled AI actions introduce reliability concerns.
+- Limited permission transparency creates security risks.
 
-- Typed MCP servers.
-- Deterministic workflow orchestration.
-- Human-in-the-Loop approval.
-- Permission-based execution.
-- Reusable automated routines.
+◈ 03. The Solution
 
-System Architecture
+OmniRelay MCP proposes a modular orchestration layer built around four core capabilities:
 
-Four-layer execution pipeline
+Capability| Function
+Typed MCP Interfaces| Structured tool communication
+Workflow Orchestration| Defined execution sequences
+Policy Enforcement| Permission and action validation
+Human-in-the-Loop| Approval before sensitive actions
 
-1. Client Interface – User commands and approval.
-2. Intent Planner – Converts requests into structured workflows.
-3. Guardrail Engine – Validates permissions and action limits.
-4. MCP Servers – Connects external applications.
+◈ 04. System Architecture
 
-## Core Use Cases
+flowchart TD
+    A["USER INTERFACE"] --> B["INTENT & PLANNER"]
+    B --> C["POLICY & GUARDRAIL ENGINE"]
+    C --> D{"APPROVAL REQUIRED?"}
+    D -->|Yes| E["HUMAN APPROVAL"]
+    E --> F["WORKFLOW EXECUTION"]
+    D -->|No| F
+    F --> G["MCP SERVER LAYER"]
+    G --> H["WORKSPACE"]
+    G --> I["LOCAL FILES"]
+    G --> J["FINANCE"]
+    G --> K["COMMUNICATION & GEO"]
+    H --> L["EXECUTION RESULT"]
+    I --> L
+    J --> L
+    K --> L
 
-### 1. Smart Bill Autopilot
-Receipt processing and expense splitting.
+Architecture Layers
 
-### 2. Appointment Sync
-Calendar and commute coordination.
+01 — Client Interface
 
-### 3. Document Concierge
-Document extraction and deadline reminders.
+- User commands
+- Workflow visibility
+- Approval interaction
 
-## Technology Stack
+02 — Intent & Planner
 
-### Proposed Technologies
-- Python
-- Model Context Protocol (MCP)
-- LangGraph
-- Pydantic
-- SQLite
-- Next.js
+- Intent interpretation
+- Schema-constrained planning
+- Workflow decomposition
 
-These technologies are proposed for the planned implementation.
-Project Roadmap
+03 — Policy & Guardrail Engine
+
+- Role-based access control
+- Permission validation
+- Action thresholds
+- Approval requirements
+
+04 — Modular MCP Servers
+
+- Workspace integrations
+- Local file operations
+- Finance and expense workflows
+- Communication and location services
+
+◈ 05. Core Use Cases
+
+1. Smart Bill & Split Autopilot
+
+"Gmail → Receipt Extraction → Expense Split → Approval"
+
+Automates the proposed flow of identifying bills, extracting expense information, and preparing expense-sharing actions.
+
+2. Appointment & Commute Sync
+
+"Messages → Calendar → Maps → Reminder"
+
+Connects appointment information with calendar scheduling and commute planning.
+
+3. Document & Deadline Concierge
+
+"Documents → Data Extraction → Task Planning → Email Draft"
+
+Transforms document information into organised tasks, deadlines, and follow-up drafts.
+
+◈ 06. Proposed Technology Stack
+
+Layer| Technology
+Core Development| Python
+Tool Communication| Model Context Protocol
+Workflow Orchestration| LangGraph
+Data Validation| Pydantic
+Local Storage| SQLite
+Frontend| Next.js
+Document Processing| PyMuPDF
+AI Planning| Claude / Gemini
+
+These are proposed technologies for the planned implementation, not a claim that all integrations are currently operational.
+
+◈ 07. Repository Structure
+
+OmniRelay-MCP/
+│
+├── README.md
+├── policy_gate.py
+├── requirements.txt
+│
+├── docs/
+│   ├── architecture.md
+│   └── use-cases.md
+│
+├── src/
+│   ├── planner/
+│   ├── guardrails/
+│   └── mcp_servers/
+│
+└── assets/
+    ├── presentation/
+    └── demo/
+
+◈ 08. Security & Reliability Principles
+
+- Permission-Scoped Execution: Actions should operate within authorised boundaries.
+- Human Approval: Sensitive operations should require explicit user confirmation.
+- Structured Validation: Typed schemas help validate inputs and outputs.
+- Deterministic Workflows: Defined execution steps improve predictability.
+- Modular Design: Independent server modules support extensibility.
+
+◈ 09. Development Roadmap
 
 - [x] Project concept and architecture
 - [x] Initial policy-gate demonstration
-- [ ] Core MCP implementation
-- [ ] Workflow orchestration
+- [ ] Core MCP server implementation
+- [ ] Workflow orchestration engine
 - [ ] External application integrations
-- [ ] Approval dashboard
+- [ ] Human approval interface
+- [ ] End-to-end workflow testing
 
-Repository Structure
+◈ 10. Current Implementation Status
 
-OmniRelay-MCP/
-├── README.md
-├── policy_gate.py
-└── docs/
+This repository currently contains project documentation and an initial Python policy-gate prototype.
 
-Current Status
+The complete orchestration engine, external integrations, and approval interface remain planned development components.
 
-Early prototype and architecture documentation. Full orchestration and application integrations are planned.
+◈ 11. Project Presentation
 
-Hackathon
-
-wHACKiest 2026
-Round: Ideathon
-Track: T-1 – Make MCP Matter
+Project: OmniRelay MCP
+Hackathon: wHACKiest 2026
+Track: MAKE MCP MATTER — LESS MAGIC, MORE UTILITY
 
 ---
 
-Making AI execution structured, transparent and trustworthy.
+<p align="center">
+  <b>OMNIRELAY MCP</b><br/>
+  <i>Connect Applications. Control Actions. Simplify Workflows.</i>
+</p>

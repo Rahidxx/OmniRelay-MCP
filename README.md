@@ -42,8 +42,9 @@ The goal is to transform disconnected application operations into controlled, re
 
 ◈ 04. SYSTEM ARCHITECTURE
 
-OmniRelay MCP follows a four-layer orchestration architecture designed to support structured planning, permission validation, and controlled execution.
+## ◈ 04. SYSTEM ARCHITECTURE
 
+OmniRelay MCP follows a four-layer orchestration architecture designed for structured planning, permission validation, and controlled execution.
 
 ### Architecture Flow
 
@@ -52,46 +53,57 @@ flowchart TD
     A[User Interface] --> B[Intent Planner]
     B --> C[Policy Engine]
     C --> D{Approval Required?}
+
     D -->|Approved| E[Workflow Executor]
     D -->|Rejected| A
+
     E --> F[MCP Server Layer]
-    F --> G[Execution Result]
-    G --> A
+
+    F --> G[Workspace Server]
+    F --> H[Local File Server]
+    F --> I[Finance Server]
+    F --> J[Communication and Geo Server]
+
+    G --> K[Execution Result]
+    H --> K
+    I --> K
+    J --> K
+
+    K --> A
 ```
 
+### Architecture Overview
 
-Architecture Components
+![OmniRelay MCP Architecture](assets/architecture.png)
 
-01 — Client Interface
+### Architecture Components
 
+**01 — Client Interface**
 - User command input
 - Workflow visibility
 - Approval interaction
 - Execution status monitoring
 
-02 — Intent & Planner
-
+**02 — Intent & Planner**
 - Natural language intent interpretation
 - Schema-constrained planning
 - Workflow decomposition
 - Execution sequence generation
 
-03 — Policy & Guardrail Engine
-
+**03 — Policy & Guardrail Engine**
 - Role-Based Access Control (RBAC)
 - Permission validation
 - Action threshold checks
 - Human approval requirements
 - Execution policy enforcement
 
-04 — Modular MCP Server Layer
-
+**04 — Modular MCP Server Layer**
 - Workspace integrations
 - Local file operations
 - Finance and expense workflows
 - Communication and geolocation services
 
-Execution Lifecycle
+### Execution Lifecycle
 
 1. User submits a request.
 2. Intent planner converts the request into structured workflow steps.
@@ -99,6 +111,7 @@ Execution Lifecycle
 4. Sensitive actions are submitted for human approval.
 5. Approved actions are routed to the relevant MCP servers.
 6. Execution results are returned to the client interface.
+
 
 ◈ 05. CORE USE CASES
 

@@ -1,13 +1,16 @@
-# Guardrails Module
+# MCP Servers
 
-The Guardrails Module is designed to enforce safety and permission rules.
+This directory is intended for modular MCP server integrations.
 
-## Planned Responsibilities
-- Validate requested actions.
-- Check user permissions.
-- Require approval for sensitive operations.
-- Prevent unauthorised execution.
-- Support reliable workflow handling.
+## Planned Integrations
+
+- Workspace Server
+- Local File Server
+- Finance Server
+- Communication Server
+- Maps and Location Server
+
+Each server will expose structured tools through the Model Context Protocol.
 
 ## Status
-An initial policy-gate prototype is available separately in the repository. Additional guardrail features are planned.
+Integration modules are planned and have not yet been fully implemented.

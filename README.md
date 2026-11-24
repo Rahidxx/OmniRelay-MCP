@@ -140,6 +140,16 @@ OmniRelay-MCP/
     ├── presentation/
     └── demo/
 
+Directory Overview
+
+- "docs/" — System architecture and project documentation.
+- "src/planner/" — Workflow planning components.
+- "src/guardrails/" — Permission and policy validation.
+- "src/mcp_servers/" — Modular MCP server integrations.
+- "assets/presentation/" — Project presentation.
+- "assets/demo/" — Project demonstration video.
+    └── demo/
+
 ◈ 08. Security & Reliability Principles
 
 - Permission-Scoped Execution: Actions should operate within authorised boundaries.

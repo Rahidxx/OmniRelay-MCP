@@ -268,6 +268,12 @@ Track: MAKE MCP MATTER — LESS MAGIC, MORE UTILITY
 
 Theme: Deterministic, Permission-Scoped Cross-App Workflows
 
+## 📂 Project Resources
+
+- 📊 [View Project Presentation](assets/OmniRelay_MCP_wHACKiest2026_Deck%20(2).pptx)
+- 🎬 [Watch Project Demo](assets/OmniRelay_MCP_Demo.mp4)
+- 🏗️ [System Architecture](assets/architecture.png)
+
 ---
 
 <p align="center">

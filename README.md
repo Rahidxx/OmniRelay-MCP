@@ -47,21 +47,26 @@ OmniRelay MCP follows a four-layer orchestration architecture designed to suppor
 Architecture Flow
 
 flowchart TD
-    A["01. CLIENT INTERFACE"] --> B["02. INTENT & PLANNER"]
-    B --> C["03. POLICY & GUARDRAIL ENGINE"]
+    A["CLIENT INTERFACE"] --> B["INTENT & PLANNER"]
+    B --> C["POLICY & GUARDRAIL ENGINE"]
     C --> D{"APPROVAL REQUIRED?"}
+
     D -->|YES| E["HUMAN APPROVAL"]
-    D -->|NO| F["WORKFLOW EXECUTION"]
-    E --> F
-    F --> G["04. MCP SERVER LAYER"]
+    E --> F["WORKFLOW EXECUTION"]
+    D -->|NO| F
+
+    F --> G["MCP SERVER LAYER"]
+
     G --> H["WORKSPACE SERVER"]
     G --> I["LOCAL FILE SERVER"]
     G --> J["FINANCE SERVER"]
     G --> K["COMMUNICATION & GEO SERVER"]
+
     H --> L["EXECUTION RESULT"]
     I --> L
     J --> L
     K --> L
+
     L --> A
 
 Architecture Components
